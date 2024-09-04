@@ -11,7 +11,8 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    name = '30 days of Python programming'
+    return render_template('about.html', name = name, title = 'About Us')
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 8001))
