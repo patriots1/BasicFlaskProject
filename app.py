@@ -1,11 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 import os
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    techs = ['HTML', 'CSS', 'Python', 'Flask']
+    name = '30 days of Python programming'
+    return render_template('home.html', techs = techs, name = name, title = 'Home')
 
 @app.route('/about')
 def about():

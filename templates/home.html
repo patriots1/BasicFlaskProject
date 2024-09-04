@@ -5,11 +5,17 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Welcome Home</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        <h1>Welcome To {{name}}</h1>
         <p>Really?</p>
+        <ul>
+            {% for tech in techs %}
+            <li>{{tech}}</li>
+            {% end for %}
+        </ul>
     </body>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
+    
 </html>
